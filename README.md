@@ -1,0 +1,2 @@
+# offspring
+Inheritance library
