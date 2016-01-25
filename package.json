@@ -1,0 +1,37 @@
+{
+  "name": "offspring",
+  "version": "0.4.0",
+  "description": "Inheritance library",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tunderdomb/offspring.git"
+  },
+  "keywords": [
+    "inheritance",
+    "class",
+    "class",
+    "extension",
+    "class",
+    "inheritance"
+  ],
+  "author": "tunderdomb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tunderdomb/offspring/issues"
+  },
+  "homepage": "https://github.com/tunderdomb/offspring#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "backyard": "^0.1.0"
+  }
+}
