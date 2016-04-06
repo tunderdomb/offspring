@@ -60,7 +60,6 @@ Factory.prototype.assemble = function() {
 Factory.prototype.digest = function() {
   var blueprint = this.blueprint
   var Constructor = this.Constructor
-  var proto = Constructor.prototype
 
   blueprint.digest("inherit", function(Super) {
     inherit(Constructor, Super)
@@ -83,16 +82,16 @@ Factory.prototype.digest = function() {
   blueprint.digest("accessor", function(name, access) {
     if (!access) return
     if (typeof access == "function") {
-      define.getter(proto, name, access)
+      define.getter(Constructor.prototype, name, access)
     }
     else if (typeof access["get"] == "function" && typeof access["set"] == "function") {
-      define.accessor(proto, name, access["get"], access["set"])
+      define.accessor(Constructor.prototype, name, access["get"], access["set"])
     }
     else if (typeof access["get"] == "function") {
-      define.getter(proto, name, access["get"])
+      define.getter(Constructor.prototype, name, access["get"])
     }
     else if (typeof access["set"] == "function") {
-      define.getter(proto, name, access["set"])
+      define.getter(Constructor.prototype, name, access["set"])
     }
   }, true)
   //blueprint.digest("include", function (includes) {
